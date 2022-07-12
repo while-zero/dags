@@ -21,4 +21,4 @@ with DAG(dag_id="db_dag_bob",
         json = conf_json
     )
 
-notebook_run
+    notebook_run
