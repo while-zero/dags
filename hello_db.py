@@ -3,11 +3,11 @@ from typing import Optional
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.providers.databricks.operators.databricks import DatabricksRunNowOperator
-
+from airflow.providers.databricks.operators.databricks import \
+    DatabricksRunNowOperator
 
 conf_json = {
-    "job_id": ,
+    "job_id": 8548787404586,
     "notebook_params": {}
 }
 
