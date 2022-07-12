@@ -11,7 +11,7 @@ conf_json = {
     }
 }
 
-with DAG(dag_id="db_dag_bob",
+with DAG(dag_id="db_dag_stefan",
          start_date=datetime(2021,1,1),
          schedule_interval="@hourly",
          catchup=False) as dag:
