@@ -7,7 +7,7 @@ from airflow.providers.databricks.operators.databricks import \
 conf_json = {
     "job_id": 827734724834405,
     "notebook_params": {
-        "cl": "Bob"
+        "cl": "Stefan"
     }
 }
 
