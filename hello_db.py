@@ -14,7 +14,7 @@ conf_json = {
 def run_databricks_job():
     pass
 
-with DAG(dag_id="hello_world_dag",
+with DAG(dag_id="hello_world_db_dag",
          start_date=datetime(2021,1,1),
          schedule_interval="@hourly",
          catchup=False) as dag:
