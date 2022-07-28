@@ -25,8 +25,14 @@ def create_dag(symbol:str) -> DAG:
             python_callable=hello_world,
             op_kwargs={"word": f"ingestion dag no {symbol}"},
         )
+        transformation_task_id: str = f"transformation_no_{symbol}"
+        ingestion = PythonOperator(
+            task_id=transformation_task_id,
+            python_callable=hello_world,
+            op_kwargs={"word": f"transformation dag no {symbol}"},
+        )
 
-        chain(ingestion)
+        chain([ingestion, transformation_task_id])
 
     return dag
 
