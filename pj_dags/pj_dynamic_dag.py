@@ -5,8 +5,8 @@ from airflow.models.baseoperator import chain
 from airflow.operators.python import PythonOperator
 
 
-def hello_world(details: str =""):
-    print("czesc", details)
+def hello_world(word: str =""):
+    print("czesc", word)
 
 
 def create_dag(symbol:str) -> DAG:
