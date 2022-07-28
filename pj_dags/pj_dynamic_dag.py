@@ -25,7 +25,7 @@ def create_dag(symbol:str) -> DAG:
         op_kwargs={"word": "ingestion dag no {symbol}"},
     )
 
-    chain(ingestion)
+    ingestion
 
     return dag
 
