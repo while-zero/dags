@@ -25,7 +25,7 @@ def second_task_always() -> None:
 
 with DAG(dag_id="jnk_two_tasks_first_sometimes_fails",
          start_date=datetime(2021,1,1),
-         schedule_interval="/3 * * * *",
+         schedule_interval="*/3 * * * *",
          catchup=False) as dag:
 
     run_first_task = PythonOperator(
