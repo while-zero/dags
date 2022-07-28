@@ -11,23 +11,24 @@ def hello_world(details: str =""):
 
 def create_dag(symbol:str) -> DAG:
     dag_id = f"dynamic_dag_no_{symbol}"
-    dag = DAG(
+    
+    with DAG(
         dag_id=dag_id,
         schedule_interval="*/2 * * * *",
         start_date=datetime(2022, 7, 15),
         catchup=False,
-    )
+    ) as dag:
 
-    ingestion_task_id: str = f"ingestion_no_{symbol}"
-    ingestion = PythonOperator(
-        task_id=ingestion_task_id,
-        python_callable=hello_world,
-        op_kwargs={"word": "ingestion dag no {symbol}"},
-    )
+        ingestion_task_id: str = f"ingestion_no_{symbol}"
+        ingestion = PythonOperator(
+            task_id=ingestion_task_id,
+            python_callable=hello_world,
+            op_kwargs={"word": "ingestion dag no {symbol}"},
+        )
 
-    ingestion
+        chain(ingestion)
 
     return dag
 
-for symbol in ['jeden', 'dwa', 'trzy']:
-    globals()[symbol] = create_dag(symbol=symbol)
+for element in ['jeden', 'dwa', 'trzy']:
+    globals()[element] = create_dag(symbol=element)
