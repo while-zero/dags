@@ -14,7 +14,7 @@ for i in range(4):
     dag_id = f"dynamic_dag_no_{i}"
     dag = DAG(
         dag_id=dag_id,
-        schedule_interval="*/15 * * * *",
+        schedule_interval="*/2 * * * *",
         start_date=datetime(2022, 7, 15),
         catchup=False,
     )
