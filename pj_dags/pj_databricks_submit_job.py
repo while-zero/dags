@@ -10,7 +10,7 @@ conf_json = {
             "input": "xyz",
         }
     },
-    "existing_cluster_id": "jnk_test",
+    "existing_cluster_id": "0711-150317-tjta4wxy",
     "run_name": "yyy"
 }
 
