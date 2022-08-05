@@ -5,12 +5,12 @@ from airflow.providers.databricks.operators.databricks import DatabricksSubmitRu
 
 conf_json = {
     "notebook_task": {
-        "notebook_path": "",
+        "notebook_path": "/Shared/some_db_notebook",
         "notebook_params": {
             "input": "xyz {{ ts_nodash_with_tz }}",
         }
     },
-    "existing_cluster_id": "",
+    "existing_cluster_id": "jnk_test",
     "run_name": "yyy"
 }
 
