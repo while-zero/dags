@@ -7,7 +7,7 @@ conf_json = {
     "notebook_task": {
         "notebook_path": "/Shared/some_db_notebook",
         "notebook_params": {
-            "input": "xyz {{ ts_nodash_with_tz }}",
+            "input": "xyz",
         }
     },
     "existing_cluster_id": "jnk_test",
